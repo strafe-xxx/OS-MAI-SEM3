@@ -1,0 +1,102 @@
+execve("./parent", ["./parent"], 0x7ffd4ebcea40 /* 36 vars */) = 0
+brk(NULL)                               = 0x55bbec8fd000
+arch_prctl(0x3001 /* ARCH_??? */, 0x7ffcbc39cb20) = -1 EINVAL (Invalid argument)
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f2d85ac2000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=19959, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 19959, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f2d85abd000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0I\17\357\204\3$\f\221\2039x\324\224\323\236S"..., 68, 896) = 68
+newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=2220400, ...}, AT_EMPTY_PATH) = 0
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+mmap(NULL, 2264656, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f2d85894000
+mprotect(0x7f2d858bc000, 2023424, PROT_NONE) = 0
+mmap(0x7f2d858bc000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7f2d858bc000
+mmap(0x7f2d85a51000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bd000) = 0x7f2d85a51000
+mmap(0x7f2d85aaa000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x215000) = 0x7f2d85aaa000
+mmap(0x7f2d85ab0000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f2d85ab0000
+close(3)                                = 0
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f2d85891000
+arch_prctl(ARCH_SET_FS, 0x7f2d85891740) = 0
+set_tid_address(0x7f2d85891a10)         = 368477
+set_robust_list(0x7f2d85891a20, 24)     = 0
+rseq(0x7f2d858920e0, 0x20, 0, 0x53053053) = 0
+mprotect(0x7f2d85aaa000, 16384, PROT_READ) = 0
+mprotect(0x55bbb3723000, 4096, PROT_READ) = 0
+mprotect(0x7f2d85afc000, 8192, PROT_READ) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+munmap(0x7f2d85abd000, 19959)           = 0
+pipe2([3, 4], 0)                        = 0
+pipe2([5, 6], 0)                        = 0
+newfstatat(1, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x12), ...}, AT_EMPTY_PATH) = 0
+getrandom("\x46\x07\x36\x00\x80\x44\xc7\x48", 8, GRND_NONBLOCK) = 8
+brk(NULL)                               = 0x55bbec8fd000
+brk(0x55bbec91e000)                     = 0x55bbec91e000
+write(1, "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \320\270\320\274\321\217 \321\204\320\260\320\271\320\273\320\260"..., 74Введите имя файла для записи вывода child1: ) = 74
+newfstatat(0, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x12), ...}, AT_EMPTY_PATH) = 0
+read(0, output1.txt
+"output1.txt\n", 1024)          = 12
+write(1, "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \320\270\320\274\321\217 \321\204\320\260\320\271\320\273\320\260"..., 74Введите имя файла для записи вывода child2: ) = 74
+read(0, output2.txt
+"output2.txt\n", 1024)          = 12
+write(1, "\320\241\320\276\320\267\320\264\320\260\321\221\320\274 \320\277\320\265\321\200\320\262\321\213\320\271 \320\264\320\276"..., 63Создаём первый дочерний процесс...
+) = 63
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f2d85891a10) = 368771
+write(1, "\320\241\320\276\320\267\320\264\320\260\321\221\320\274 \320\262\321\202\320\276\321\200\320\276\320\271 \320\264\320\276"..., 63Создаём второй дочерний процесс...
+) = 63
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f2d85891a10) = 368772
+close(3)                                = 0
+close(5)                                = 0
+write(1, "\320\222\320\262\320\265\320\264\320\270\321\202\320\265 \321\201\321\202\321\200\320\276\320\272\320\270 \320\264\320\273"..., 109Введите строки для обработки (напишите 'exit' для завершения):
+) = 109
+read(0, hello
+"hello\n", 1024)                = 6
+write(1, "\320\236\321\202\320\277\321\200\320\260\320\262\320\273\321\217\320\265\320\274 \320\262 pipe1: h"..., 37Отправляем в pipe1: hello
+) = 37
+write(4, "hello\0", 6)                  = 6
+read(0, world
+"world\n", 1024)                = 6
+write(1, "\320\236\321\202\320\277\321\200\320\260\320\262\320\273\321\217\320\265\320\274 \320\262 pipe1: w"..., 37Отправляем в pipe1: world
+) = 37
+write(4, "world\0", 6)                  = 6
+read(0, test
+"test\n", 1024)                 = 5
+write(1, "\320\236\321\202\320\277\321\200\320\260\320\262\320\273\321\217\320\265\320\274 \320\262 pipe1: t"..., 36Отправляем в pipe1: test
+) = 36
+write(4, "test\0", 5)                   = 5
+read(0, example 
+"example\n", 1024)              = 8
+write(1, "\320\236\321\202\320\277\321\200\320\260\320\262\320\273\321\217\320\265\320\274 \320\262 pipe1: e"..., 39Отправляем в pipe1: example
+) = 39
+write(4, "example\0", 8)                = 8
+read(0, aaarrr
+"aaarrr\n", 1024)               = 7
+write(1, "\320\236\321\202\320\277\321\200\320\260\320\262\320\273\321\217\320\265\320\274 \320\262 pipe1: a"..., 38Отправляем в pipe1: aaarrr
+) = 38
+write(4, "aaarrr\0", 7)                 = 7
+read(0, ttteeee
+"ttteeee\n", 1024)              = 8
+write(1, "\320\236\321\202\320\277\321\200\320\260\320\262\320\273\321\217\320\265\320\274 \320\262 pipe1: t"..., 39Отправляем в pipe1: ttteeee
+) = 39
+write(4, "ttteeee\0", 8)                = 8
+read(0, eeeerrr
+"eeeerrr\n", 1024)              = 8
+write(1, "\320\236\321\202\320\277\321\200\320\260\320\262\320\273\321\217\320\265\320\274 \320\262 pipe2: e"..., 39Отправляем в pipe2: eeeerrr
+) = 39
+write(6, "eeeerrr\0", 8)                = 8
+read(0, exit
+"exit\n", 1024)                 = 5
+close(4)                                = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=368771, si_uid=1000, si_status=0, si_utime=0, si_stime=1} ---
+close(6)                                = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=368772, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+wait4(-1, NULL, 0, NULL)                = 368771
+write(1, "\320\240\320\276\320\264\320\270\321\202\320\265\320\273\321\214\321\201\320\272\320\270\320\271 \320\277\321\200\320\276\321"..., 58Родительский процесс завершён.
+) = 58
+exit_group(0)                           = ?
++++ exited with 0 +++
