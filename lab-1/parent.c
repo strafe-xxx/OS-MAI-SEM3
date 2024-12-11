@@ -112,7 +112,6 @@ int main() {
     close(pipe2[1]);
 
     wait(NULL);
-    wait(NULL);
 
     printf("Родительский процесс завершён.\n");
     return 0;
